@@ -1,3 +1,5 @@
+# This code takes the electron spin resonance data collected by esr.py and analyzes it
+
 import numpy as np
 from numpy import linalg as LA
 import matplotlib.pyplot as plt
