@@ -1,3 +1,7 @@
+# The "esr" function controls various instruments 
+# (HP8665A frequency generator, SR510 lock-in amplifier, Keithley digital voltmeter) 
+# to perform electron spin resonance experiments on nitrogen-vacancy centers
+
 import visa
 import time
 from datetime import datetime
@@ -56,6 +60,8 @@ def esr(startFreq, stopFreq, stepFreq, delay, counts, filename):
     #plt.plot(x,y, label='')
     #plt.show()
 
+
+# This code is modified to run various forms of data collection
 HP8665A = rm.open_resource('GPIB0::11::INSTR')
 for i in range(1,10000,1):
     for amp in range(100,1000,50):
